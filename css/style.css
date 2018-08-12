@@ -5,29 +5,43 @@ Primary Color (taupe): #382A24;
 Secondary Color (orange): #F97C4E;
  */
 
- body {
-  padding: 50px; /* Adds a 10px inner spacing to all sides*/
-  margin: 50px; /* Adds a 10px outer spacing to all sides*/
+body {
+  align-content: center;
+  padding: 50px;
+  /* Adds a 10px inner spacing to all sides*/
+  margin: 50px;
+  /* Adds a 10px outer spacing to all sides*/
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
-  line-height: 1.6; /* Sets the line-height to 1.6 */
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
 }
 
 h1 {
   font-size: 100px;
-  color:#382A24;
+  color: #382A24;
   line-height: 0.5;
+  text-align: center;
 }
 
 h2 {
   font-size: 50px;
-  color:#382A24;
+  color: #382A24;
   line-height: 1;
+  text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  color:#382A24;
+  color: #382A24;
+  text-align: center;
+}
+
+p {
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
 }
 
 a {
@@ -35,7 +49,8 @@ a {
 }
 
 a:hover {
-  text-decoration: none; /* No underlining when hovering over a link */
+  text-decoration: none;
+  /* No underlining when hovering over a link */
 }
 
 a:visited {
@@ -50,22 +65,26 @@ a:active {
 
 button {
   /* overwrite browser defaults */
-  border: none; /* reset the border */
+  border: none;
+  /* reset the border */
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-
   /* style button */
-  background-color: #F97C4E;;
+  background-color: #F97C4E;
+  ;
   color: white !important;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #F97C4E;; /* width of the border, type, color */
+  border-bottom: 2px solid #F97C4E;
+  ;
+  /* width of the border, type, color */
   transition: 0.2s opacity;
 }
 
-button:hover,
-button:focus {
-  cursor: pointer; /* let's the mouse appear as hand when hovering over the button */
-  opacity: 0.8; /* Reduces the opactiy of the button to 80% */
+button:hover, button:focus {
+  cursor: pointer;
+  /* let's the mouse appear as hand when hovering over the button */
+  opacity: 0.8;
+  /* Reduces the opactiy of the button to 80% */
 }
