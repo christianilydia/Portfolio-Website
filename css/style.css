@@ -5,13 +5,8 @@ Primary Color (taupe): #382A24;
 Secondary Color (orange): #F97C4E;
  */
 header > svg {
-  width: 18%;
-  height: 18%;
-}
-
-div > svg {
-  width:20%;
-  height: 20%;
+  width: 10%;
+  height: 10%;
 }
 
 nav {
@@ -56,10 +51,18 @@ body {
   margin: 30px;
   /* Adds a 10px outer spacing to all sides*/
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   /* Sets the font size to 16px */
   line-height: 1;
   /* Sets the line-height to 1.6 */
+}
+
+body > svg {
+  text-align: center;
+  margin: 30px;
+  padding: 30px;
+  width:95%;
+  height:95%;
 }
 
 h1 {
@@ -82,7 +85,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
   color: #7F736E;
   line-height: 2;
@@ -116,22 +119,24 @@ a:active {
 }
 
 button {
-  margin: 20px;
+  display: inline-block;
+  justify-content: center;
+  margin: 30px;
+  width: 200px;
+  height: 80px;
+  line-height: 3.5;
   /* overwrite browser defaults */
   border: none;
   /* reset the border */
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 300;
   /* style button */
-  background-color: #545151;
+  background-color: #FF742E;
   color: #FFFFFF;
   text-decoration: none;
-  padding: 30px;
-  border-bottom: 10px solid #545151;
-  ;
   /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition: 0.5s opacity;
 }
 
 button > a {
@@ -144,6 +149,30 @@ button:hover, button:focus {
   /* let's the mouse appear as hand when hovering over the button */
   opacity: 0.8;
   /* Reduces the opactiy of the button to 80% */
+}
+
+button,
+.button {
+      display: inline-block;
+      justify-content: center;
+      width: 200px;
+      height: 80px;
+      line-height: 3.5;
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font size: 20px;
+      font weight: 300;
+      background-color: #FF742E;
+      color: white !important;
+      text-decoration:none;
+      text-align: center;
+      transition: 0.5s opacity;
+    }
+
+button:hover,
+.button:hover {
+      cursor: pointer;
+      opacity: 0.8;
 }
 
 @media all and (max-width: 500px) {
@@ -181,3 +210,30 @@ button:hover, button:focus {
   margin-right: 0;
   }
  }
+
+@keyframes color-change {
+    0% {fill: #09BC00;}
+    50% {fill: #BABC00;}
+    100% {fill: #F16C6C;}
+}
+
+@keyframes cloud-move {
+    from {transform: translate(500px,80px);}
+    to {transform: translate(1000px,80px);}
+}
+
+.Garden {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.Cloud {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  }
