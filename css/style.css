@@ -111,10 +111,11 @@ h3 > svg {
 }
 
 p {
-  padding: 30px;
-  margin: 30px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
-  line-height: 30px;
+  line-height: 27px;
 }
 
 a {
@@ -266,3 +267,28 @@ a:active {
   }
 
 .css img { width: 100%; height: auto; }
+
+.project-details {
+  display: none;
+}
+
+.column-4 {
+  /* other rules... */
+  vertical-align:top;
+}
+
+.project {
+  position: relative;
+}
+
+.project-details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Reset this to 0 */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
