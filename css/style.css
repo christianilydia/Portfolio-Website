@@ -9,16 +9,14 @@ header {
   padding: 10px 5px;
 }
 
-
-header > svg {
-  width: 10%;
-  height: 10%;
+header > em {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
 }
 
 nav {
   list-style-type: none;
   font-size: 20px;
-  color: #7F736E;
   padding: 0;
   float: right;
 }
@@ -26,8 +24,14 @@ nav {
 li {
   list-style-type: none;
   display: inline-block;
-  margin-left: 20px;
-  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 10px;
 }
 
 .wrapper {
@@ -49,7 +53,9 @@ li {
   font-size: 16px;
   width: 23%;
   display: inline-block;
+  margin-top: 50px;
   margin-right: 1%;
+  padding: 20px;
 }
 
 .column-4:last-child {
@@ -61,7 +67,7 @@ margin-right: 0;
 }
 
 body {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   /* Sets the font size to 16px */
   line-height: 1;
@@ -70,8 +76,8 @@ body {
 
 .house-with-cloud {
   text-align: center;
-  width:95%;
-  height:95%;
+  width: 95%;
+  height: 95%;
 }
 
 .social-links {
@@ -79,28 +85,26 @@ body {
 }
 
 h1 {
-  margin-top: 150px;
   font-size: 100px;
   font-weight: 700;
-  letter-spacing: 10px;
-  color: #FF3D2E;
-  text-shadow: -3px 3px black;
-  line-height: 0.25;
+  color: black;
+  text-shadow: -2px 2px 4px grey;
+  line-height: 0.05;
   text-align: center;
+  padding-top: 60px;
 }
 
 h2 {
-  font-size:40px;
+  font-size: 28px;
   font-weight: 300;
-  color: #7F736E;
-  line-height: 1;
   text-align: center;
+  padding-bottom:20px;
 }
 
 h3 {
-  font-size: 20px;
+  padding-top: 60px;
+  font-size: 18px;
   font-weight: 300;
-  color: #7F736E;
   line-height: 2;
   text-align: center;
 }
@@ -111,15 +115,16 @@ h3 > svg {
 }
 
 p {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 17px;
+  padding-top: 50px;
+  padding-bottom: 1px;
   margin: 10px;
   text-align: center;
-  line-height: 27px;
+  line-height: 26px;
 }
 
-a {
-  color: #382A24;
+a:link {
+  color: #7F736E;
 }
 
 a:hover {
@@ -141,14 +146,14 @@ a:active {
   display: inline-block;
   justify-content: center;
   margin: 30px;
-  width: 200px;
+  width: 300px;
   height: 80px;
   line-height: 3.5;
   /* overwrite browser defaults */
   border: none;
   /* reset the border */
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
   font-weight: 300;
   /* style button */
   background-color: #FF742E;
@@ -174,17 +179,17 @@ a:active {
 .button {
       display: inline-block;
       justify-content: center;
-      width: 200px;
+      width: 300px;
       height: 80px;
       line-height: 3.5;
       border: none;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
       font size: 20px;
       font weight: 300;
       background-color: #FF742E;
       color: white !important;
       text-decoration:none;
-      text-align: center;
+      padding: 15px;
       transition: 0.5s opacity;
     }
 
@@ -195,7 +200,7 @@ a:active {
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
 
   .logo {
     /* Make logo smaller by changing it's height */
@@ -240,17 +245,17 @@ a:active {
  }
 
 @keyframes color-change {
-    0% {fill: #09BC00;}
-    50% {fill: #BABC00;}
-    100% {fill: #F16C6C;}
+    0% {fill: #FBA57F;}
+    50% {fill: #FBCE7F;}
+    100% {fill: #FBE57F;}
 }
 
 @keyframes cloud-move {
-    from {transform: translate(500px,80px);}
-    to {transform: translate(1000px,80px);}
+    from {transform: translate(0,50px);}
+    to {transform: translate(600px,50px);}
 }
 
-.Garden {
+.Sun {
   animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
@@ -259,12 +264,12 @@ a:active {
 }
 
 .Cloud {
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-name: cloud-move;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-  }
+}
 
 .css img { width: 100%; height: auto; }
 
@@ -281,12 +286,16 @@ a:active {
   position: relative;
 }
 
-.project:hover .project-details {
-  opacity: 1;
-}
-
 .project-details {
-  /* New lines */
-  opacity: 0;
-  display: block;
-  transition: all 400ms ease-in-out;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0; /* Reset this to 0 */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
