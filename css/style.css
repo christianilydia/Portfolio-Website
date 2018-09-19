@@ -5,6 +5,10 @@ Primary Color (taupe): #382A24;
 Secondary Color (orange): #F97C4E;
  */
 
+.bordering {
+  border: 1px solid;
+}
+
 header {
   padding: 10px 5px;
 }
@@ -31,7 +35,7 @@ li {
 }
 
 hr {
-  margin: 10px;
+  margin: 5px;
 }
 
 .wrapper {
@@ -67,6 +71,10 @@ margin-right: 0;
 }
 
 body {
+  background-image: url("https://github.com/christianilydia/Portfolio-Website/blob/master/img/rawpixel-670749-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   /* Sets the font size to 16px */
@@ -87,10 +95,11 @@ body {
 h1 {
   font-size: 100px;
   font-weight: 700;
-  color: black;
   text-shadow: -2px 2px 4px grey;
   line-height: 0.05;
   text-align: center;
+  margin-top: 67px;
+  margin-bottom: 80px;
   padding-top: 60px;
 }
 
@@ -98,6 +107,8 @@ h2 {
   font-size: 28px;
   font-weight: 300;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
   padding-bottom:20px;
 }
 
@@ -124,7 +135,7 @@ p {
 }
 
 a:link {
-  color: #7F736E;
+  color: #6E635A;
 }
 
 a:hover {
@@ -134,12 +145,12 @@ a:hover {
 
 a:visited {
   /* visited link */
-  color: #7F736E;
+  color: #6E635A;
 }
 
 a:active {
   /* selected link */
-  color: #382A24;
+  color: #6E635A;
 }
 
 .button {
@@ -225,6 +236,7 @@ a:active {
      line-height: 1;
      text-align: center;
    }
+
    h2 {
      /* Reduce font-size of heading */
      font-size:15px;
@@ -253,6 +265,12 @@ a:active {
 @keyframes cloud-move {
     from {transform: translate(0,50px);}
     to {transform: translate(600px,50px);}
+}
+
+@keyframes text-animate {
+    0% {background position: 0% 100%;}
+    50% {background position: 100% 0%;}
+    100% {background position: 0% 100%;}
 }
 
 .Sun {
