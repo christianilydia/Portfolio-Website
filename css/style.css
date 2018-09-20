@@ -9,6 +9,11 @@ Secondary Color (orange): #F97C4E;
   border: 1px solid;
 }
 
+div > iframe {
+  display: block;
+  margin:auto;
+}
+
 header {
   padding: 10px 5px;
 }
