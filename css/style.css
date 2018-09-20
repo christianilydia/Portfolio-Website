@@ -11,7 +11,8 @@ Secondary Color (orange): #F97C4E;
 
 div > iframe {
   display: block;
-  margin:auto;
+  margin: auto;
+  float: center;
 }
 
 header {
